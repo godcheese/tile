@@ -1,0 +1,11 @@
+os: linux
+jdk: oraclejdk8
+dist: trusty
+sudo: true
+group: stable
+install:
+- ./mvnw -e clean install -DskipTests=true -Dmaven.javadoc.skip=true
+language: java
+before_script:
+- java -version
+- chmod +x mvnw

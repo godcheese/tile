@@ -1,0 +1,10 @@
+stages:
+- install
+
+install:
+  stage: install
+  image: maven:3.5-jdk-8
+  before_script:
+  script:
+  - java -version
+  - ./mvnw -e clean install -DskipTests=true -Dmaven.javadoc.skip=true
