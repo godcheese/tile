@@ -1,5 +1,6 @@
+CHCP 65001
 @echo off
-echo "author godcheese"
+echo "author godcheese [godcheese@outlook.com]"
 set CURRENT_DIR=%cd%
 echo %CURRENT_DIR%
 set SCRIPTS_DIR=%~dp0

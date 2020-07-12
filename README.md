@@ -25,13 +25,12 @@ Tile 是一款自用的 Java 快速开发工具集依赖包，提供一些常用
 ## Usage
 - GitHub Maven Repository: https://github.com/godcheese/maven-repository
 - Maven：将 tile-1.0.0.jar 拷贝只项目根目录下的 lib 目录下，然后再 pom.xml 文件下添加以下依赖代码：
+
 ```
 <dependency>
     <groupId>com.godcheese</groupId>
     <artifactId>tile</artifactId>
     <version>1.0.0</version>
-    <scope>system</scope>
-    <systemPath>${project.basedir}/lib/tile-1.0.0.jar</systemPath>
     <type>jar</type>
 </dependency>
 ```
