@@ -47,7 +47,7 @@ public class ImageUtil {
             yawp(bufferedImage, width, height);
         }
         graphics.dispose();
-        return new ImageUtil().new VerifyCodeImage(randomString, bufferedImage, expireIn);
+        return new VerifyCodeImage(randomString, bufferedImage, expireIn);
     }
 
     public static VerifyCodeImage createVerifyCodeImage(int width, int height, java.awt.Color backgroundColor, String randomString, java.awt.Color stringColor, File fontFile, boolean yawp, int interLine, long expireIn) throws IOException, FontFormatException {
@@ -86,7 +86,7 @@ public class ImageUtil {
             yawp(bufferedImage, width, height);
         }
         graphics.dispose();
-        return new ImageUtil().new VerifyCodeImage(randomString, bufferedImage, expireIn);
+        return new VerifyCodeImage(randomString, bufferedImage, expireIn);
     }
 
     public static VerifyCodeImage createVerifyCodeImage(int width, int height, java.awt.Color backgroundColor, String randomString, java.awt.Color stringColor, InputStream fontInputStream, boolean yawp, int interLine, long expireIn) throws IOException, FontFormatException {
@@ -125,7 +125,7 @@ public class ImageUtil {
             yawp(bufferedImage, width, height);
         }
         graphics.dispose();
-        return new ImageUtil().new VerifyCodeImage(randomString, bufferedImage, expireIn);
+        return new VerifyCodeImage(randomString, bufferedImage, expireIn);
     }
 
     public static void yawp(BufferedImage bufferedImage, int width, int height) {
@@ -142,7 +142,7 @@ public class ImageUtil {
         }
     }
 
-    public class VerifyCodeImage {
+    public static class VerifyCodeImage {
 
         private String verifyCode;
 
