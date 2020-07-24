@@ -14,8 +14,6 @@ public class MBeanServerUtil {
         QueryExp subQuery1 = Query.match(Query.attr("protocol"), Query.value("HTTP/1.1"));
         QueryExp subQuery2 = Query.anySubString(Query.attr("protocol"), Query.value("Http11"));
         QueryExp query = Query.or(subQuery1, subQuery2);
-
-        System.out.println(mBeanServer.queryNames(new ObjectName("*:*"), Query.match(Query.attr("protocol"), Query.value("HTTP/1.1"))));
         return mBeanServer.queryNames(new ObjectName("*:type=Connector,*"), query);
     }
 

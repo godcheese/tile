@@ -15,7 +15,7 @@ public class SHAUtil {
      * @param plainText 明文
      * @return String
      */
-    public static String encrypt( final EncryptType encryptType, final String plainText) {
+    public static String encrypt(final EncryptType encryptType, final String plainText) {
         if (EncryptType.SHA256.equals(encryptType)) {
             return sha(plainText, encryptType.value);
         }

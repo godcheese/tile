@@ -15,22 +15,7 @@ import java.util.Map;
  */
 public class JwtUtil {
 
-    public enum TokenType {
-
-        /**
-         * 访问 token
-         */
-        ACCESS_TOKEN("accessToken"),
-
-        /**
-         * 刷新 token
-         */
-        REFRESH_TOKEN("refreshToken");
-
-        TokenType(String type) {
-        }
-    }
-
+    private static final String REFRESH_EXPIRATION_CLAIM_NAME = "rep";
     private static JwtUtil instance;
 
     private static JwtProperties jwtProperties;
@@ -45,8 +30,6 @@ public class JwtUtil {
         }
         return instance;
     }
-
-    private static final String REFRESH_EXPIRATION_CLAIM_NAME = "rep";
 
     public String getSubjectFromToken(String token) {
         String subject = null;
@@ -235,5 +218,21 @@ public class JwtUtil {
      */
     private Date calculateRefreshExpirationDate(Date createdDate) {
         return new Date(createdDate.getTime() + jwtProperties.getRefreshExpiration().toMillis());
+    }
+
+    public enum TokenType {
+
+        /**
+         * 访问 token
+         */
+        ACCESS_TOKEN("accessToken"),
+
+        /**
+         * 刷新 token
+         */
+        REFRESH_TOKEN("refreshToken");
+
+        TokenType(String type) {
+        }
     }
 }

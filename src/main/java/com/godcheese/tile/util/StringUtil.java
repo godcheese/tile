@@ -138,7 +138,6 @@ public class StringUtil {
         StringBuilder stringBuilder = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
             char ch = words.charAt(i);
-            System.out.println(underline.equalsIgnoreCase(String.valueOf(ch)));
             if (underline.equalsIgnoreCase(String.valueOf(ch))) {
                 int ii = i + 1;
                 if (ii <= (length - 1)) {

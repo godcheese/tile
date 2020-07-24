@@ -14,7 +14,8 @@ public class JwtProperties {
 
     private String secret = "tile";
 
-    private SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;;
+    private SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
+    ;
 
     private Duration expiration = Duration.ofMinutes(1);
 

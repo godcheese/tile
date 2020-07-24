@@ -11,9 +11,8 @@ import java.util.zip.*;
  */
 public class ZipUtil {
 
-    private static final int BUFFER = 1024;
-
     public static final String SUFFIX = ".zip";
+    private static final int BUFFER = 1024;
 
     /**
      * 压缩时获取要被压缩的源文件或文件夹下所有的文件或文件夹
@@ -250,8 +249,6 @@ public class ZipUtil {
             fileInputStream = new FileInputStream(sourceZipFile);
             zipInputStream = new ZipInputStream(fileInputStream);
             while ((zipEntry = zipInputStream.getNextEntry()) != null) {
-                System.out.println(zipEntry.getName());
-                System.out.println(zipEntry.isDirectory());
                 if (zipEntry.isDirectory()) {
                     File directory = new File(targetFile.getCanonicalPath() + File.separator + zipEntry.getName());
                     if (!directory.exists()) {
